@@ -1,0 +1,33 @@
+
+[1mFrom:[0m /home/denisepen/cli-data-gem-assessment-v-000/keto_recipes/lib/keto_recipes/recipe.rb @ line 19 KetoRecipes::Recipe#scrape_recipes:
+
+     [1;34m7[0m: [32mdef[0m [1;34mscrape_recipes[0m
+     [1;34m8[0m: 
+     [1;34m9[0m:   doc = [1;34;4mNokogiri[0m::HTML(open([31m[1;31m"[0m[31mhttps://ketodash.com/recipe[1;31m"[0m[31m[0m))
+    [1;34m10[0m: 
+    [1;34m11[0m:    doc.css([31m[1;31m"[0m[31mdiv.col-sm-6[1;31m"[0m[31m[0m).collect [32mdo[0m |dish|
+    [1;34m12[0m:      [1;36mself[0m.name = dish.css([31m[1;31m"[0m[31mdiv.card-header h5 a[1;31m"[0m[31m[0m).attribute([31m[1;31m"[0m[31mtitle[1;31m"[0m[31m[0m).text
+    [1;34m13[0m:      [1;36mself[0m.url = [31m[1;31m"[0m[31mhttps://ketodash.com#{dish.css([1;31m"[0m[31mdiv.card-header h5 a[1;31m"[0m[31m[0m[31m).attribute([1;31m"[0m[31mhref[1;31m"[0m[31m[0m[31m).text}[0m[31m[1;31m"[0m[31m[0m
+    [1;34m14[0m:      [1;36mself[0m.type = dish.css([31m[1;31m"[0m[31mdiv.card-header h5 span[1;31m"[0m[31m[0m).text
+    [1;34m15[0m:      [1;36mself[0m.calories = dish.css([31m[1;31m"[0m[31mdiv.card-block ul li[1;31m"[0m[31m[0m)[[1;34m0[0m].text
+    [1;34m16[0m:      [1;36mself[0m.protein = dish.css([31m[1;31m"[0m[31mdiv.card-block ul li[1;31m"[0m[31m[0m)[[1;34m1[0m].text
+    [1;34m17[0m:      [1;36mself[0m.fat = dish.css([31m[1;31m"[0m[31mdiv.card-block ul li[1;31m"[0m[31m[0m)[[1;34m2[0m].text
+    [1;34m18[0m:     [1;36mself[0m.carbs = dish.css([31m[1;31m"[0m[31mdiv.card-block ul li[1;31m"[0m[31m[0m)[[1;34m3[0m].text
+ => [1;34m19[0m:        binding.pry
+    [1;34m20[0m:       [1;34m# recipe_1 = self #.new[0m
+    [1;34m21[0m:       [1;34m# recipe_1.name = dish.css("div.card-header h5 a").attribute("title").text[0m
+    [1;34m22[0m:       [1;34m# # binding.pry[0m
+    [1;34m23[0m:       [1;34m# recipe_1.url = "https://ketodash.com#{dish.css("div.card-header h5 a").attribute("href").text}"[0m
+    [1;34m24[0m:       [1;34m# recipe_1.type = dish.css("div.card-header h5 span").text[0m
+    [1;34m25[0m:       [1;34m# recipe_1.calories = dish.css("div.card-block ul li")[0].text[0m
+    [1;34m26[0m:       [1;34m# recipe_1.protein = dish.css("div.card-block ul li")[1].text[0m
+    [1;34m27[0m:       [1;34m# recipe_1.fat = dish.css("div.card-block ul li")[2].text[0m
+    [1;34m28[0m:       [1;34m# recipe_1.carbs = dish.css("div.card-block ul li")[3].text[0m
+    [1;34m29[0m:       [1;34m#  @@recipes << recipe_1[0m
+    [1;34m30[0m:       [36m@@recipes[0m << [1;36mself[0m
+    [1;34m31[0m:        binding.pry
+    [1;34m32[0m: 
+    [1;34m33[0m:   [32mend[0m
+    [1;34m34[0m:   [36m@@recipes[0m
+    [1;34m35[0m: [32mend[0m
+

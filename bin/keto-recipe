@@ -1,0 +1,7 @@
+#!usr/bin/env ruby
+require "bundler/setup"
+require_relative "../lib/keto_recipes"
+# puts "Hello World!"
+# require './lib/keto_recipes'
+
+ KetoRecipes::CLI.new.call
