@@ -4,7 +4,7 @@ This is a command line application that scrapes the https://ketodash.com/recipe 
 Once you choose a recipe to view you will be give it's calorie count, fat, protein, and carb information. You will also be provided with a URL that you can use to be taken to the recipe's instructions.
 
 ## Usage
-To run this application it is necessary to first run bundle install to install all required gems and dependencies. Next run `ruby bin/keto-recipe`  or `bin/console` to begin the application. To end teh application type `exit`.  
+To run this application it is necessary to first run bundle install to install all required gems and dependencies. Next run `ruby bin/keto-recipe`  or `bin/console` to begin the application. To end the application type `exit`.  
 
 
 
