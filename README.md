@@ -1,25 +1,11 @@
 # KetoRecipes
 
-This gem will provide you with a list of ketogenic recipes. You have the choice of viewing the list in total or by type.
-Once you choose a recipe to view you will be give it's calorie, fat, protein, and carb information. You will also be provided with a URL that you can click to be taken to the recipe's instructions.
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'keto_recipes'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install keto_recipes
+This is a command line application that scrapes the https://ketodash.com/recipe website. You have the choice of viewing a list of all recipes or organizing the recipes by category.
+Once you choose a recipe to view you will be give it's calorie count, fat, protein, and carb information. You will also be provided with a URL that you can use to be taken to the recipe's instructions.
 
 ## Usage
+To run this application it is necessary to first run bundle install to install all required gems and dependencies. Next run `ruby bin/keto-recipe` to begin.  
+
 
 
 
